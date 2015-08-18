@@ -24,7 +24,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Sufia specific gems
-gem 'sufia', '6.2.0'
+gem 'hydra-head', '~> 9.2.1'
+gem 'sufia', '6.3.0'
 gem 'kaminari', github: 'jcoyne/kaminari', branch: 'sufia'  # required to handle pagination properly in dashboard. See https://github.com/amatsuda/kaminari/pull/322
 
 # Use ActiveModel has_secure_password
