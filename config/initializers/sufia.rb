@@ -67,6 +67,13 @@ Sufia.config do |config|
     "Video" => "http://schema.org/VideoObject",
     "Other" => "http://schema.org/CreativeWork",
   }
+  
+  config.departments = {
+    "Chemistry" => "Chemistry",
+    "Computer Science" => "Computer Science",
+    "English" => "English",
+    "History" => "Histry"
+  }
 
   config.permission_levels = {
     "Choose Access"=>"none",
@@ -111,7 +118,7 @@ Sufia.config do |config|
   # config.redis_namespace = "sufia"
 
   # Specify the path to the file characterization tool:
-  config.fits_path = "/usr/local/Cellar/fits/0.8.6-1/fits.sh"
+  config.fits_path = "/Users/lfarrell/fits-0.6.2/fits.sh"
 
   # Specify how many seconds back from the current time that we should show by default of the user's activity on the user's dashboard
   # config.activity_to_show_default_seconds_since_now = 24*60*60

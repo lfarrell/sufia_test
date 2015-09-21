@@ -1,5 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  # Enter your Shibboleth login/logout URLs here
+  # From https://github.com/gwu-libraries/gw-sufia
+  config.logout_url = "https://etds.lib.unc.edu/Shibboleth.sso/Logout"
+  config.login_url = "https://etds.lib.unc.edu/Shibboleth.sso/Login"
+
 
   # Code is not reloaded between requests.
   config.cache_classes = true

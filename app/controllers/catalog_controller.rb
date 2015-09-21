@@ -46,7 +46,7 @@ class CatalogController < ApplicationController
 
     # Specify which field to use in the tag cloud on the homepage.
     # To disable the tag cloud, comment out this line.
-    config.tag_cloud_field_name = Solrizer.solr_name("tag", :facetable)
+  #  config.tag_cloud_field_name = Solrizer.solr_name("tag", :facetable)
 
     # solr field configuration for document/show views
     config.index.title_field = solr_name("title", :stored_searchable)
@@ -63,6 +63,7 @@ class CatalogController < ApplicationController
     config.add_facet_field solr_name("based_near", :facetable), label: "Location", limit: 5
     config.add_facet_field solr_name("publisher", :facetable), label: "Publisher", limit: 5
     config.add_facet_field solr_name("file_format", :facetable), label: "File Format", limit: 5
+    config.add_facet_field solr_name("department", :facetable), label: "Department", limit: 5
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
@@ -72,6 +73,7 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
     config.add_index_field solr_name("title", :stored_searchable), label: "Title", itemprop: 'name'
+    config.add_index_field solr_name("department", :stored_searchable), label: "Department"
     config.add_index_field solr_name("description", :stored_searchable), label: "Description", itemprop: 'description'
     config.add_index_field solr_name("tag", :stored_searchable), label: "Keyword", itemprop: 'keywords'
     config.add_index_field solr_name("subject", :stored_searchable), label: "Subject", itemprop: 'about'
@@ -91,6 +93,7 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
     config.add_show_field solr_name("title", :stored_searchable), label: "Title"
+    config.add_show_field solr_name("department", :stored_searchable), label: "Department"
     config.add_show_field solr_name("description", :stored_searchable), label: "Description"
     config.add_show_field solr_name("tag", :stored_searchable), label: "Keyword"
     config.add_show_field solr_name("subject", :stored_searchable), label: "Subject"

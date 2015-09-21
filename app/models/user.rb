@@ -7,7 +7,9 @@ class User < ActiveRecord::Base
  include Sufia::User
   include Sufia::UserUsageStats
 
-
+  def admin?
+    return true
+  end
 
   if Blacklight::Utils.needs_attr_accessible?
 

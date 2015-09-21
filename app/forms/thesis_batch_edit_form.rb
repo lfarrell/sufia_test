@@ -1,0 +1,2 @@
+class ThesisBatchEditForm < ThesisEditForm
+end

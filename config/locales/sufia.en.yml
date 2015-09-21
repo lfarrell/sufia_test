@@ -1,0 +1,10 @@
+en:
+  simple_form:
+    labels:
+      generic_file:
+        alternative: "Alternative Title"
+        avaiable: "Embargo Until"
+    metadata_help:
+      generic_file:
+        alternative: "An Alternate Title for the File."
+        available: "Date when item(s) should become available after being embargoed"
