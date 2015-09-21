@@ -16,3 +16,4 @@
 !/log/.keep
 /tmp
 sufia.komodoproject
+.sass-cache/*
