@@ -1,5 +1,5 @@
 class BatchController < ApplicationController
-  include Sufia::BatchControllerBehavior
+  include Unclib::BatchControllerBehavior
 
-  self.edit_form_class = ThesisBatchEditForm
+  self.edit_form_class = Unclib::Forms::ThesisEditForm
 end

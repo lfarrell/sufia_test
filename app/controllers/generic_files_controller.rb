@@ -1,7 +1,10 @@
 class GenericFilesController < ApplicationController
-  include Sufia::Controller
-  include Sufia::FilesControllerBehavior
+  include Unclib::FilesControllerBehavior
 
   self.presenter_class = ThesisPresenter
-  self.edit_form_class = ThesisEditForm
+  self.edit_form_class = Unclib::Forms::ThesisEditForm
+
+  def new
+    @batch_id = Batch.create.id
+  end
 end

@@ -1,2 +1,0 @@
-class ThesisBatchEditForm < ThesisEditForm
-end

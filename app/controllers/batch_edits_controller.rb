@@ -1,9 +1,9 @@
 class BatchEditsController < ApplicationController
   include Hydra::BatchEditBehavior
   include GenericFileHelper
-  include Sufia::BatchEditsControllerBehavior
+  include Unclib::BatchEditsControllerBehavior
 
   def terms
-    ThesisBatchEditForm.terms
+    Unclib::ThesisBatchEditForm.terms
   end
 end

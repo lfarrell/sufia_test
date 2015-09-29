@@ -39,7 +39,7 @@ module Unclib
         generic_file.embargo.save if generic_file.embargo
         generic_file.visibility = attributes[:visibility]
         true
-      elsif !attributes[:embargo_release_date]
+      elsif !(attributes[:embargo_release_date].present?) && attributes[:embargo_release_date].length < 1
         generic_file.errors.add(:visibility, 'When setting visibility to "embargo" you must also specify embargo release date.')
         false
       else
@@ -80,7 +80,6 @@ module Unclib
         true
       end
     end
-
 
   end
 end

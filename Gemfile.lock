@@ -613,7 +613,6 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   devise-guests (~> 0.3)
-  hydra-head (~> 9.2.1)
   hydra-role-management
   jbuilder (~> 2.0)
   jettywrapper
