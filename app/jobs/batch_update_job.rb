@@ -40,10 +40,12 @@ class BatchUpdateJob
       denied << gf
       return
     end
+
     gf.title = title[gf.id] if title[gf.id]
     gf.attributes = file_attributes
     gf.visibility= visibility
     save_tries = 0
+
     begin
       gf.save!
     rescue RSolr::Error::Http => error
@@ -54,6 +56,7 @@ class BatchUpdateJob
       sleep 0.01
       retry
     end #
+
     Sufia.queue.push(ContentUpdateEventJob.new(gf.id, login))
     saved << gf
   end
